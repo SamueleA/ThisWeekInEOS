@@ -17,7 +17,7 @@ let Post = require('./models/articles');
 
 const port = 5000;
 
-app.get('/posts', (req, res)=>{
+app.get('/api/posts', (req, res)=>{
   let date = req.query.date;
   if (date == undefined) {
     Post.find({}).sort({date:-1}).exec((err, articles)=>{
