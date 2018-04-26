@@ -1,31 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Post from './components/Post';
-import Request from 'request';
 
 class App extends React.Component {
-  contructor(){
+  constructor(){
       super();
-      this.state={
-        mostRecent = null;
+      this.state= {
+        mostRecent:{}
       }
   }
 
   componentDidMount(){
     fetch('/api/posts').then(result=>{
-      return results.json();
+      console.log('result',result);
+      return result.json();
     }).then(data =>{
-      let post = return(
-        <post title={data.title} date={data.date} content = {data.content}/>
-      )
-      this.setState({mostRecent:post })
+      console.log(data);
+      this.setState({mostRecent:data[0] })
     });
 
   }
   render(){
+    console.log(this.state.mostRecent);
     return <div>
       <h1>react app!</h1>
-      {this.state.mostRecent }
+      <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
     </div >
   }
 }

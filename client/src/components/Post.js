@@ -1,9 +1,15 @@
 import React from 'react';
 
 class Post extends React.Component {
-
+  constructor(props){
+    super(props);
+  }
   render() {
-    return <p>component {this.props.body}</p>
+    return <div>
+    <p> {this.props.title}</p>
+    <p> {this.props.content}</p>
+    <p> {this.props.date}</p>
+    </div>
   }
 
 }

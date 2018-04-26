@@ -4,7 +4,8 @@
   "description": "blog for thisweekineos",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"node server.js\" \"npm run client\" ",
+    "client": "npm start --prefix client",
     "nodemon": "nodemon server.js"
   },
   "author": "Samuele Agostinelli",
