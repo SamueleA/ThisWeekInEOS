@@ -7,7 +7,7 @@ class Post extends React.Component {
   render() {
     return <div>
     <p> {this.props.title}</p>
-    <p> {this.props.content}</p>
+    <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
     <p> {this.props.date}</p>
     </div>
   }
