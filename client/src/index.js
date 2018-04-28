@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Post from './components/Post';
-import style from './index.scss'
+import Subscribe from './components/Subscribe';
+import style from './index.scss';
 
 class App extends React.Component {
   constructor(){
@@ -21,12 +22,12 @@ class App extends React.Component {
   }
   render(){
     return <div>
-      <h1>react app!</h1>
+      <h1>this week in EOS</h1>
+      <Subscribe />
       <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
     </div >
   }
 }
-
 
 
 ReactDOM.render(<App/>, document.getElementById('app') );
