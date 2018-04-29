@@ -6,7 +6,7 @@ class Subscribe extends React.Component {
 
   render() {
     return (
-      <div class="email-octopus-form-wrapper">
+      <div class="email-octopus-form-wrapper text-center">
           <h2 class="email-octopus-heading">Subscribe to This Week In EOS!</h2>
           <p class="email-octopus-success-message"></p>
           <p class="email-octopus-error-message"></p>

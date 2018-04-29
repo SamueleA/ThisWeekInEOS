@@ -18,16 +18,19 @@ class App extends React.Component {
     }).then(data =>{
       this.setState({mostRecent:data[0] })
     });
-
   }
+  
   render(){
-    return <div>
-      <h1>this week in EOS</h1>
-      <Subscribe />
-      <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
-    </div >
+    return (
+      <div className='container'>
+        <h1 className='text-center'>This week in EOS News!</h1>
+        <img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' />
+        <div className='line'></div>
+        <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
+        <Subscribe />
+      </div >
+    )
   }
 }
-
 
 ReactDOM.render(<App/>, document.getElementById('app') );
