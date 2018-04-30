@@ -6,6 +6,13 @@ h1{
   margin-top: 20px;
 }
 
+li {
+  list-style-type: none;
+}
+ul {
+  padding: 0;
+}
+
 .eosLogo {
   max-width: 150px;
   display: block;
