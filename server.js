@@ -45,4 +45,10 @@ app.get('/api/posts', (req, res)=>{
 
 });
 
-app.listen(port, ()=>{console.log(`Server started on port ${port}`)});
+console.log('api server mode: ' + process.env.NODE_ENV);
+if (process.env.NODE_ENV == 'production') {
+  app.listen(port, '0.0.0.0', ()=>{console.log(`Server on port ${port}`)});
+}
+else {
+  app.listen(port, ()=>{console.log(`Server started on port ${port}`)});
+}

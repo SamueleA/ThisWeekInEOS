@@ -4,8 +4,10 @@
   "description": "blog for thisweekineos",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"npm run client\" ",
+    "start": "concurrently \"export NODE_ENV=development && node server.js\" \"npm run client\" ",
+    "start:prod": "concurrently \"export NODE_ENV=production && node server.js\" \"npm run client\" ",
     "client": "npm start --prefix client",
+    "client:prod":"npm run start:prod --prefix client",
     "nodemon": "nodemon server.js"
   },
   "author": "Samuele Agostinelli",

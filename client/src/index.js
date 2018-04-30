@@ -5,6 +5,8 @@ import Subscribe from './components/Subscribe';
 import Archive from './components/Archive';
 import style from './index.scss';
 
+console.log('client server mode: ' + process.env.NODE_ENV);
+
 class App extends React.Component {
   constructor(){
       super();
