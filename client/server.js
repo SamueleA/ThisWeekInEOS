@@ -1,48 +1,14 @@
-let http = require('http');
-let fs = require('fs');
-let path = require('path');
-let port = 8080;
+const express = require('express');
+const path = require('path');
+const port = 8080;
+const app = express();
 
-let server = http.createServer(requestHandler);
+app.use(express.static(__dirname));
 
-//arguments processing
-//no arguments will use current directory
-var arg =  process.argv[2];
-var root = (arg == undefined ? __dirname : arg.substring(0, arg.length -1))
-
-server.listen(port, '0.0.0.0', (err) =>{
-  if (err) {
-    console.error('Error upon opening the port.');
-  }
-  console.log(`Server is listening to port ${port}!`);
-
+app.get('*',(req, res)=>{
+  res.sendFile(path.resolve(__dirname, 'client/index.html'));
 });
 
-function requestHandler(req, res) {
-  let pathName = req.url;
-  if (pathName == '/') {
-    pathName = '/client/index.html';
-  }
-
-  reqExt = path.extname(pathName);
-  let extTypes = {
-    '.html':'text/html',
-    '.css':'text/css',
-    '.js':'text/js',
-    '.jpeg':'image/jpeg',
-    '.png':'image/png',
-    '.ico':'image/x-icon'
-  }
-
-  let contentType = extTypes[reqExt] || 'text/plain';
-
-  fs.readFile(root + pathName, (err, data)=>{
-    if (err) {
-      res.writeHead(500);
-      res.end('Error serving file!');
-    }
-    res.writeHead(200, {'Content-Type':contentType});
-    res.end(data);
-  });
-
-}
+app.listen(port, '0.0.0.0', ()=>{
+  console.log(`Server started on ${port}`)
+});
