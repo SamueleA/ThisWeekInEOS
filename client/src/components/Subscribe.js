@@ -3,8 +3,12 @@
 import React from 'react';
 
 class Subscribe extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
   render() {
+
     return (
       <div class="email-octopus-form-wrapper text-center">
           <h2 class="email-octopus-heading">Subscribe to This Week In EOS!</h2>

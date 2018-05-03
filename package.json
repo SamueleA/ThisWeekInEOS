@@ -7,7 +7,7 @@
     "start": "concurrently \"export NODE_ENV=development && node server.js\" \"npm run client\" ",
     "start:prod": "concurrently \"export NODE_ENV=production && node server.js\" \"npm run client\" ",
     "client": "npm start --prefix client",
-    "client:prod":"npm run start:prod --prefix client",
+    "client:prod": "npm run start:prod --prefix client",
     "nodemon": "nodemon server.js"
   },
   "author": "Samuele Agostinelli",
@@ -15,6 +15,7 @@
   "dependencies": {
     "concurrently": "^3.5.1",
     "express": "^4.16.3",
+    "history": "^4.7.2",
     "mongoose": "^5.0.16"
   },
   "devDependencies": {

@@ -20,7 +20,7 @@ class Archive extends React.Component {
   render() {
     let archiveRows=[];
     for (var i=1;i<this.props.archive.length;i++) {
-      archiveRows.push( <li><a href='#'>{this.returnDay(i)}-{this.returnMonth(i)}-{this.returnYear(i)}</a> </li>);
+      archiveRows.push( <li key={i}><a href='#'>{this.returnDay(i)}-{this.returnMonth(i)}-{this.returnYear(i)}</a> </li>);
     }
 
 
