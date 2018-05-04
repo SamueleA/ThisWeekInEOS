@@ -39,32 +39,35 @@ class App extends React.Component {
 
   render(){
     var currentPost;
+
     return (
       <Router>
         <div className='container'>
           <h1 className='text-center'>This week in EOS News!</h1>
-          <img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' />
+          <Link to='/'><img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' /></Link>
           <div className='line'></div>
-            <Switch>
+            <div>
             <Route path='/:archiveDate' render={({match})=>{ return(
               <div>
                 { this.getCurrentPost(match.params.archiveDate)}
+                <Subscribe/>
+                <Archive archive={this.state.orderedHistory} selected={match.params.archiveDate} />
               </div>
             )}}/>
 
-            <Route path='/' render={()=>{ return(
+            <Route exact path='/' render={()=>{ return(
               <div>
                 <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
+                <Subscribe/>
+                <Archive archive={this.state.orderedHistory} selected={this.state.mostRecent.date} />
               </div>
             )}}/>
-          </Switch>
-          <Subscribe/>
-          <Archive archive={this.state.orderedHistory}/>
-        </div >
+            </div>
+          </div>
       </Router>
+
     )
   }
 }
-
 
 ReactDOM.render(<App/>, document.getElementById('app') );

@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Link   } from "react-router-dom";
+
+
 
 class Archive extends React.Component {
   constructor(props){
@@ -19,19 +22,23 @@ class Archive extends React.Component {
 
   render() {
     let archiveRows=[];
-    for (var i=1;i<this.props.archive.length;i++) {
-      archiveRows.push( <li key={i}><a href='#'>{this.returnDay(i)}-{this.returnMonth(i)}-{this.returnYear(i)}</a> </li>);
+    for (var i=0;i<this.props.archive.length;i++) {
+      var article = this.props.archive[i];
+      if (article.date == this.props.selected) {
+        archiveRows.push( <li key={i}><span style={{fontWeight: 700}}>{this.returnDay(i)}-{this.returnMonth(i)}-{this.returnYear(i)}</span></li>);
+      }
+      else {
+        archiveRows.push( <li key={i}><Link to={`/${article.date }`}>{this.returnDay(i)}-{this.returnMonth(i)}-{this.returnYear(i)}</Link> </li>);
+      }
     }
 
-
     return <div className = 'text-center'>
-    <h2>Archives</h2>
-    <ul>
-      {archiveRows}
-    </ul>
+      <h2>Archives</h2>
+      <ul>
+        {archiveRows}
+      </ul>
     </div>
   }
-
 }
 
 export default Archive;
