@@ -11,12 +11,12 @@ class Subscribe extends React.Component {
 
     return (
       <div class="email-octopus-form-wrapper text-center">
-          <h2 class="email-octopus-heading">Subscribe to This Week In EOS!</h2>
+          <h2 class="email-octopus-heading">Subscribe to subscribers</h2>
           <p class="email-octopus-success-message"></p>
           <p class="email-octopus-error-message"></p>
 
           <form method="post"
-            action="https://emailoctopus.com/lists/08002523-4a4f-11e8-a3c9-06b79b628af2/members/embedded/1.1/add"
+            action="https://emailoctopus.com/lists/edb527e9-506a-11e8-a3c9-06b79b628af2/members/embedded/1.1/add"
             class="email-octopus-form"
           >
 
@@ -27,7 +27,7 @@ class Subscribe extends React.Component {
 
 
               <div class="email-octopus-form-row-hp" aria-hidden="true">
-                  <input type="text" name="hp08002523-4a4f-11e8-a3c9-06b79b628af2"
+                  <input type="text" name="hpedb527e9-506a-11e8-a3c9-06b79b628af2"
                      tabindex="-1"
                      autocomplete="nope"/>
               </div>
@@ -44,7 +44,9 @@ class Subscribe extends React.Component {
           <div class="email-octopus-rewards">
               Powered by <a href="https://emailoctopus.com/?urli=vsPdK&amp;utm_medium=user_referral&amp;utm_source=builder" target="_blank">EmailOctopus</a>
           </div>
+
       </div>
+
     );
   }
 }
