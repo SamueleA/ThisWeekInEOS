@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline --mode development",
     "build": "webpack --mode production",
-    "start:prod": "webpack-dev-server --hot --inline --mode production"
+    "start:prod": "node server.js"
   },
   "author": "",
   "license": "ISC",
