@@ -20,7 +20,13 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    fetch('/api/posts').then(result=>{
+    var fetchPath;
+    if (process.env.NODE_ENV == 'production'){
+      fetchPath = 'http://thisweekineos:5000/api/posts'
+    } else {
+      fetchPath = '/api/posts'
+    }
+    fetch(fetchPath).then(result=>{
       return result.json();
     }).then(data =>{
       this.setState({mostRecent:data[0] });
