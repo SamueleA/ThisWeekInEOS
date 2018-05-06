@@ -22,7 +22,7 @@ class App extends React.Component {
   componentDidMount(){
     var fetchPath;
     if (process.env.NODE_ENV == 'production'){
-      fetchPath = 'http://thisweekineos:5000/api/posts'
+      fetchPath = 'http://thisweekineos.com:5000/api/posts'
     } else {
       fetchPath = '/api/posts'
     }
