@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:5000/api/posts').then(result=>{
+    fetch('/api/posts').then(result=>{
       return result.json();
     }).then(data =>{
       this.setState({mostRecent:data[0] });
