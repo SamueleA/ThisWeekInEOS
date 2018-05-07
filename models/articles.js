@@ -6,10 +6,6 @@ let articleSchema = mongoose.Schema({
     type: Number,
     required: true
   },
-  title: {
-    type: String,
-    required: true
-  },
   content: {
     type: String,
     required: true

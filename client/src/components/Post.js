@@ -8,8 +8,7 @@ class Post extends React.Component {
   }
 
   render() {
-    return <div className = 'text-center'>
-    <p> {this.props.title}</p>
+    return <div className = 'text-justify post'>
       <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
     </div>
   }

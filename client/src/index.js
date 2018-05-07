@@ -38,7 +38,7 @@ class App extends React.Component {
     for( var i = 0; i<this.state.orderedHistory.length;i++) {
       if (date == this.state.orderedHistory[i].date) {
         let currentPost = this.state.orderedHistory[i];
-        return <Post title={currentPost.title} date={currentPost.date} content = {currentPost.content} />
+        return <Post date={currentPost.date} content = {currentPost.content} />
       }
     }
   }
@@ -63,7 +63,7 @@ class App extends React.Component {
 
             <Route exact path='/' render={()=>{ return(
               <div>
-                <Post title={this.state.mostRecent.title} date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
+                <Post date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
                 <Subscribe/>
                 <Archive archive={this.state.orderedHistory} selected={this.state.mostRecent.date} />
               </div>

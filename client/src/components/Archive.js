@@ -32,7 +32,7 @@ class Archive extends React.Component {
       }
     }
 
-    return <div className = 'text-center'>
+    return <div className = 'text-center archive'>
       <h2>Archives</h2>
       <ul>
         {archiveRows}
