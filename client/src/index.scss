@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  background: linear-gradient(to bottom, #89cff0, #f0aa89);
+  background: linear-gradient(to bottom, #7baec6, #cc9378);
   min-height: 100%;
 }
 
@@ -29,7 +29,12 @@ h1{
   margin-bottom: 40px
 }
 
+.post > div > div {
+  background-color: white;
+}
+
 .email-octopus-form-wrapper {
+  background-color: white;
   padding: 20px;
   display: block;
   margin: 40px auto;
