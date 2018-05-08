@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Play');
+
 body {
-  background-color: white;
-  background: linear-gradient(to bottom, #7baec6, #a57965);
+  background: url(/assets/dark_geometric.png) repeat 0 0;
   min-height: 100%;
+  font-family: 'Play', sans-serif;
 }
 
 h1{
+  font-family: 'Play', sans-serif;
   margin-top: 75px;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
+h2, h3{
+  font-family: 'Lobster', cursive;
 }
 
 .eosLogo {
@@ -23,7 +32,7 @@ h1{
 }
 
 .archive {
-  background-color: white;
+  background-color: #eee;
   max-width: 500px;
   margin: 40px auto;
   border-radius: 5px;
@@ -33,21 +42,32 @@ h1{
 }
 
 .line {
-  border: 2px solid black;
+  border: 2px solid #f2a43e;
   border-radius: 50%;
-  margin-bottom: 75px
+  margin-bottom: 75px;
 }
 
 .post > div > div {
-  background-color: white;
+  background-color: #eee;
 }
 
 .email-octopus-form-wrapper {
-  background-color: white;
+  background-color: #eee;
   padding: 20px;
   display: block;
   margin: 40px auto;
   border-radius: 5px;
   border: 2px solid black;
   max-width: 500px;
+}
+
+button.subscribeButton {
+  background-color: #f2a43e;
+  border-radius: 5px;
+  outline: none;
+}
+
+button.subscribeButton:active {
+  background-color: black;
+  color: white;
 }

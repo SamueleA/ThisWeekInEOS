@@ -36,7 +36,7 @@ class Subscribe extends React.Component {
                   <input type="hidden"
                      name="successRedirectUrl"
                      value=""/>
-                  <button type="submit">Subscribe</button>
+                  <button className='subscribeButton' type="submit">Subscribe</button>
               </div>
           </form>
 
