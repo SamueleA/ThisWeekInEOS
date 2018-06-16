@@ -34,7 +34,7 @@ h2, h2.subscribeHeader{
   padding:0;
 }
 
-.archive {
+.archive, .affiliates {
   background-color: #eee;
   max-width: 500px;
   margin: 40px auto;
@@ -42,6 +42,14 @@ h2, h2.subscribeHeader{
   border: 2px solid black;
   padding: 20px;
   margin-bottom: 75px;
+}
+
+.affiliates {
+  margin-bottom:25px;
+}
+
+.affiliates li{
+  margin-top: 20px;
 }
 
 .line {

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Post from './components/Post';
 import Subscribe from './components/Subscribe';
 import Archive from './components/Archive';
+import Affiliates from './components/Affiliates';
 import style from './index.scss';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -56,6 +57,7 @@ class App extends React.Component {
             <Route path='/:archiveDate' render={({match})=>{ return(
               <div>
                 { this.getCurrentPost(match.params.archiveDate)}
+                <Affiliates/>
                 <Subscribe/>
                 <Archive archive={this.state.orderedHistory} selected={match.params.archiveDate} />
               </div>
@@ -64,6 +66,7 @@ class App extends React.Component {
             <Route exact path='/' render={()=>{ return(
               <div>
                 <Post date={this.state.mostRecent.date} content = {this.state.mostRecent.content}/>
+                <Affiliates/>
                 <Subscribe/>
                 <Archive archive={this.state.orderedHistory} selected={this.state.mostRecent.date} />
               </div>
