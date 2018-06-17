@@ -51,8 +51,8 @@ class App extends React.Component {
       <Router>
         <div className='container'>
           <h1 className='text-center'>This week in EOS News!</h1>
-          <Link to='/'><img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' /></Link>
           <div className='line'></div>
+          <Link to='/'><img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' alt='EOS logo from block.one' /></Link>
             <div>
             <Route path='/:archiveDate' render={({match})=>{ return(
               <div>
