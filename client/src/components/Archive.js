@@ -20,6 +20,10 @@ class Archive extends React.Component {
       return this.props.archive[index].date.toString().substring(6, 8);
   }
 
+  componentDidUpdate(){
+     window.scrollTo(0,0);
+  }
+
   render() {
     let archiveRows=[];
     for (var i=0;i<this.props.archive.length;i++) {

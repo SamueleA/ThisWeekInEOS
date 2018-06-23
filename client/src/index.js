@@ -20,6 +20,10 @@ class App extends React.Component {
       }
   }
 
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount(){
     var fetchPath;
     if (process.env.NODE_ENV == 'production'){
@@ -48,9 +52,9 @@ class App extends React.Component {
     var currentPost;
 
     return (
-      <Router>
+      <Router >
         <div className='container'>
-          <h1 className='text-center'>This week in EOS News!</h1>          
+          <h1 className='text-center'>This week in EOS News!</h1>
           <Link to='/'><img src='/assets/eos-seeklogo.com.svg' className='eosLogo text-blog' alt='EOS logo from block.one' /></Link>
           <div className='line'></div>
             <div>
