@@ -82,3 +82,24 @@ button.subscribeButton:active {
   background-color: black;
   color: white;
 }
+//**fig caption**
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 5px;
+}
+
+img.imgCaption {
+    width: 100%;
+
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
